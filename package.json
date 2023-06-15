@@ -1,0 +1,16 @@
+{
+  "name": "javascript-unit-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "author": "Gele Hasan",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}

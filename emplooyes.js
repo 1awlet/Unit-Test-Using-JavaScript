@@ -46,15 +46,16 @@ router.get('/', function(req, res){
 
 
 router.get('/:id', function(req, res){
-    //Modified
+
     const emplooyID = req.params['id'];
     const chosenEmplooye = emplooyes.find((employee) => employee.id === parseInt(emplooyID));
  
  
-    if(chosenEmplooye){
-       //res(spell);
+    if(spell){
+   
        res.json(chosenEmplooye);
- 
+    }else{
+        res.status(404).json({ error: 'Employee not founnd' });
     }
    
  });

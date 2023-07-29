@@ -1,4 +1,5 @@
-
+import express from 'express';
+const router = express.Router();
 let emplooyes = 
    [
       {
@@ -36,3 +37,14 @@ let emplooyes =
        Company:"Freelancer"
     }
    ];
+
+
+
+
+
+
+module.exports={
+    router: router,
+    emplooyes:emplooyes
+ } 
+ 

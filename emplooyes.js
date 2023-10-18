@@ -64,6 +64,10 @@ router.get('/:id', function(req, res){
 
  })
 
+ router.post('/add', function(req, res){
+
+ })
+
 module.exports={
     router: router,
     emplooyes:emplooyes

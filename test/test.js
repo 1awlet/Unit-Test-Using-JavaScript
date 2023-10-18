@@ -49,3 +49,19 @@ describe('Tests functions', ()=>{
         })
     })
 })
+
+//Spells
+describe("Does the spell erxist?", ()=>{
+
+    it("The spell should exist", (done)=>{
+
+        chai.request(port)
+        .get('/emplooyes')
+        .end((req,res)=>{   
+            assert.equal(res.status, 200)
+            done()
+        })
+    })
+})
+
+

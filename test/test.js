@@ -64,4 +64,19 @@ describe("Does the spell erxist?", ()=>{
     })
 })
 
+//test to check the default route message
+describe("Check the output message", ()=>{
+
+    it("The message shown should be correct", (done)=>{
+        chai.request(port)
+        .get('/')
+        .end((req,res)=>{
+     
+        let data = JSON.parse(res.text);
+        assert.equal(data.message, "Welcome to emplooyes dashboard");
+            done();
+        })
+    })
+
+})
 

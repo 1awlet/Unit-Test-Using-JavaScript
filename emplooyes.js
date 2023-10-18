@@ -60,7 +60,9 @@ router.get('/:id', function(req, res){
    
  });
 
+ router.put('/:id', function(req, res){
 
+ })
 
 module.exports={
     router: router,

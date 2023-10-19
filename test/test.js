@@ -51,9 +51,9 @@ describe('Tests functions', ()=>{
 })
 
 //Spells
-describe("Does the spell erxist?", ()=>{
+describe("Does the does user exist?", ()=>{
 
-    it("The spell should exist", (done)=>{
+    it("The users lists should exist", (done)=>{
 
         chai.request(port)
         .get('/emplooyes')

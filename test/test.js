@@ -103,9 +103,22 @@ describe("It should send back the right data for specific emplooye", ()=>{
         .end((req,res)=>{
             const resData = res.body; 
              assert.equal(typeof resData, "object")
-           
             done();
         })
     })
+
+
+    it("Specific emplooye data shown in response should match the data in emplooye array", (done) => {
+            const expectedResult= emplooye.find((spell)=>spell.id== emplooyeId); 
+            
+            chai.request('http://localhost:3000')
+              .get(`/emplooyes/${emplooyeId}`)
+              .end((err, res) => {
+                const responseData = JSON.parse(res.text); 
+              assert.deepEqual(JSON.stringify(responseData), JSON.stringify(expectedResult));
+               done();
+          
+              });
+          });
 
     }) 

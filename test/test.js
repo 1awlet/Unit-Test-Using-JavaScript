@@ -94,4 +94,18 @@ describe("It should send back the right data for specific emplooye", ()=>{
              done();
          })
      })
+
+
+     it("The response should return as form of an object ", (done)=>{
+
+        chai.request(port)
+        .get(`/emplooyes/${emplooyeId}`)
+        .end((req,res)=>{
+            const resData = res.body; 
+             assert.equal(typeof resData, "object")
+           
+            done();
+        })
+    })
+
     }) 

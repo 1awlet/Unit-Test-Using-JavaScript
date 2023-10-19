@@ -3,6 +3,7 @@ import assert from 'assert';
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 
+const emplooyes = require("../emplooyes").emplooyes;
 chai.use(chaiHttp);
 describe('Tests functions', ()=>{
     let word='Space unit';
@@ -71,33 +72,26 @@ describe("Check the output message", ()=>{
         chai.request(port)
         .get('/')
         .end((req,res)=>{
-     
         let data = JSON.parse(res.text);
         assert.equal(data.message, "Welcome to emplooyes dashboard");
             done();
         })
     })
-
 })
 
 describe("It should send back the right data for specific emplooye", ()=>{
     //The emplote we going to test
      const emplooyeId = 1003;
      it("The end point for specific emplooye should be reached", (done)=>{
- 
          chai.request(port)
          .get(`/emplooyes/${emplooyeId}`)
-         .end((req,res)=>{
-             
+         .end((req,res)=>{   
              assert.equal(res.status, 200);
- 
              done();
          })
      })
 
-
      it("The response should return as form of an object ", (done)=>{
-
         chai.request(port)
         .get(`/emplooyes/${emplooyeId}`)
         .end((req,res)=>{
@@ -109,7 +103,7 @@ describe("It should send back the right data for specific emplooye", ()=>{
 
 
     it("Specific emplooye data shown in response should match the data in emplooye array", (done) => {
-            const expectedResult= emplooye.find((spell)=>spell.id== emplooyeId); 
+            const expectedResult= emplooyes.find((spell)=>spell.id== emplooyeId); 
             
             chai.request('http://localhost:3000')
               .get(`/emplooyes/${emplooyeId}`)

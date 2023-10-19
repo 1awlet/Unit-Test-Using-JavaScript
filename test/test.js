@@ -50,7 +50,7 @@ describe('Tests functions', ()=>{
     })
 })
 
-//Spells
+//users
 describe("Does the does user exist?", ()=>{
 
     it("The users lists should exist", (done)=>{
@@ -80,3 +80,18 @@ describe("Check the output message", ()=>{
 
 })
 
+describe("It should send back the right data for specific emplooye", ()=>{
+    //The emplote we going to test
+     const emplooyeId = 1003;
+     it("The end point for specific emplooye should be reached", (done)=>{
+ 
+         chai.request(port)
+         .get(`/emplooyes/${emplooyeId}`)
+         .end((req,res)=>{
+             
+             assert.equal(res.status, 200);
+ 
+             done();
+         })
+     })
+    }) 

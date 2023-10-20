@@ -131,3 +131,17 @@ const addEmplooye= (id,name,job, company)=>{
         
     }
 }
+
+
+describe("It should add a new emplooye", () => {
+ 
+    const newEmplooye = addEmplooye(7, "Gele", "IT-Engineer",
+              "noneofyourBusiness");
+
+    it("it should contain the right properties ", ()=>{
+        assert.property(newEmplooye, "name");
+        assert.property(newEmplooye, "ingredients");
+        assert.property(newEmplooye, "result");
+    })
+
+})

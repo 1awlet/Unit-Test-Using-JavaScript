@@ -115,4 +115,19 @@ describe("It should send back the right data for specific emplooye", ()=>{
               });
           });
 
-    }) 
+    })
+
+const addEmplooye= (id,name,job, company)=>{
+
+    if( typeof id !== "number",  typeof name !== "string", typeof job !== "string",
+        typeof company !== "string") {
+        return null
+        }
+    return {
+        id,
+        name,
+        job,
+        company,
+        
+    }
+}

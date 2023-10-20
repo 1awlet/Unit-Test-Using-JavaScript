@@ -144,4 +144,11 @@ describe("It should add a new emplooye", () => {
         assert.property(newEmplooye, "result");
     })
 
+
+    it("it should have correct length ", ()=>{
+
+        assert.strictEqual(Object.keys(newEmplooye).length, 4);
+
+    })
+
 })

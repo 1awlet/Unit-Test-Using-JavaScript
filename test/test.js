@@ -151,4 +151,17 @@ describe("It should add a new emplooye", () => {
 
     })
 
+    it("The new emplooye added  should exist and match with the provided values", (done) => {
+        chai.request(port)
+          .post('/emplooyes/add')
+          .send(newEmplooye)
+          .end((err, res) => {
+            assert.equal(res.status, 200);  
+            assert.deepEqual(res.body, newEmplooye); 
+            console.log(res.body);
+            done();
+          });
+      });
+      
+
 })

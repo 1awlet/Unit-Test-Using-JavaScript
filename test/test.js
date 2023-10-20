@@ -140,8 +140,8 @@ describe("It should add a new emplooye", () => {
 
     it("it should contain the right properties ", ()=>{
         assert.property(newEmplooye, "name");
-        assert.property(newEmplooye, "ingredients");
-        assert.property(newEmplooye, "result");
+        assert.property(newEmplooye, "job");
+        assert.property(newEmplooye, "company");
     })
 
 

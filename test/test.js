@@ -177,5 +177,21 @@ const updateEmplooye = (emplooyeId,updatedFields=[])=>{
 
 const isEmplooyeFound= emplooyes.find((employe) => employe.id === emplooyeId);
 
+if(!isEmplooyeFound) return null ;
 
+if( updatedFields.hasOwnProperty("name") && typeof updatedFields.name === "string"){
+    updatedEmplooye.name=updatedFields.name 
+}
+
+if(updatedFields.hasOwnProperty("job") && updatedFields.job=== "string"){
+    updatedEmplooye.job=updatedFields.job
+} 
+
+
+if(updatedFields.hasOwnProperty("company") && typeof updatedFields.result === "company")  {
+    updatedEmplooye.result=updatedFields.result
+}
+
+
+return updatedEmplooye;
 }

@@ -209,4 +209,14 @@ it("should return null if the emplooye does not exist", () => {
 
     assert.equal(testNonExistEmplooyee, null);
   });
+
+
+  it("The properties should have the right types", ()=>{
+    assert.equal(typeof updatedEmplooye.id, "number", "Id should be a number ");
+    assert.equal(typeof updatedEmplooye.name, "string", "name should be string");
+    assert.equal(typeof updatedEmplooye.job, "string"," job It should bea string");
+    assert.equal(typeof updatedSpell.company, "string", "company should be a string");
+  })
+
+
 })

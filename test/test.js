@@ -165,3 +165,17 @@ describe("It should add a new emplooye", () => {
       
 
 })
+
+
+const updateEmplooye = (emplooyeId,updatedFields=[])=>{
+
+   
+    let updatedEmplooye= {
+        id: emplooyeId,
+    }
+
+
+const isEmplooyeFound= emplooyes.find((employe) => employe.id === emplooyeId);
+
+
+}

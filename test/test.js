@@ -219,4 +219,24 @@ it("should return null if the emplooye does not exist", () => {
   })
 
 
+
+
+  it("it should update successfully ",  (done)=>{
+
+    chai.request(port)
+       .put(`/emplooyes/${emplooyeId}`)
+       .send(updatedEmplooye)
+       .end((req, res)=>{
+       
+           assert.equal(JSON.stringify(res.body), JSON.stringify(updatedEmplooye));
+        
+           done();
+       })
+    
+})
+
+
+
+
+
 })

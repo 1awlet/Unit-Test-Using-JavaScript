@@ -195,3 +195,18 @@ if(updatedFields.hasOwnProperty("company") && typeof updatedFields.result === "c
 
 return updatedEmplooye;
 }
+
+
+
+describe("Update a specific spell", ()=>{
+    const emplooyeId= 1003;
+
+const updatedEmplooye = updateEmplooye(emplooyeId,{name:"Samuel", job:"It support",  company:"Moodys"});
+
+it("should return null if the emplooye does not exist", () => {
+    let doesntExistId=42332;
+    const testNonExistEmplooyee = updateEmplooye(doesntExistId);
+
+    assert.equal(testNonExistEmplooyee, null);
+  });
+})

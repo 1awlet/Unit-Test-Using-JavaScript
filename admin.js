@@ -41,6 +41,17 @@ router.post('/login', function(req, res) {
 })
 
 
+router.get('/', function(req, res) {
+   
+
+    // If authorized, return the current user information
+    res.json({
+        username: "admin",
+        email: "admin@example.com",
+        role: "admin"
+    });
+});
+
 
 
 function isUsernameValid(username) {

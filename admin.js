@@ -11,3 +11,15 @@ const users = [
         
     }
 ];
+
+
+function isUsernameValid(username) {
+    //this regular expression is provided in the book 5.2.2
+    const validAlphabets= /^[A-Za-z][0-9]+$/;;
+    return validAlphabets.test(username);
+}
+
+
+function isPasswordValid(password) {
+    return password.length >= 8 && password.length <= 18;
+}

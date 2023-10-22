@@ -12,6 +12,28 @@ const users = [
     }
 ];
 
+router.post('/login', function(req, res) {
+    const { username, password } = req.body;
+
+  // Input validation
+     if (!isUsernameValid(username)) {
+     return res.status(400).json({ error: "Invalid username" });
+    }
+
+    if (!isPasswordValid(password)) {
+    return res.status(400).json({ error: "Invalid password" });
+}
+    const user = users.find((user) => user.username === username);
+
+  
+    const  doesPasswordMatch = bcrypt.compareSync(password, user.passwordHash);
+   
+
+
+})
+
+
+
 
 function isUsernameValid(username) {
     //this regular expression is provided in the book 5.2.2

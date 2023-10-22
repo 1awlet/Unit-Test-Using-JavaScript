@@ -28,7 +28,15 @@ router.post('/login', function(req, res) {
   
     const  doesPasswordMatch = bcrypt.compareSync(password, user.passwordHash);
    
+    if (!doesPasswordMatch || !user ) {
+        return res.status(401).json({ error: 'unauthorized user' });
+    }
 
+    // Clear password hash from response
+    const { passwordHash, ...userWithoutPassword } = user;
+
+    // Return user information without password hash
+    res.json(userWithoutPassword);
 
 })
 

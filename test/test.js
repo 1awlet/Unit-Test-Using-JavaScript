@@ -62,7 +62,8 @@ describe("Check the output message", () => {
     })
 })
 
-
+//This unit test checks if a specific emplooye data can be reached 
+// and data returned is correct and in a correct format
 describe("It should send back the right data for specific emplooye", () => {
     //The employe we going to test
     const emplooyeId = 1003;

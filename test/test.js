@@ -16,7 +16,8 @@ describe('Tests functions', () => {
         })
 })
 
-    //WIll pass
+
+//This unit test checks if the route is reachable
 describe('Test http request', () => {
     it('it should return 200', (done) => {
         chai.request('http://localhost:3000')

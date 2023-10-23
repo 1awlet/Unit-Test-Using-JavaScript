@@ -34,7 +34,7 @@ describe('Test http request', () => {
 
 
 
-//users
+//This test checks if the users end point is reach able
 describe("Does the does user exist?", () => {
 
     it("The users lists should exist", (done) => {

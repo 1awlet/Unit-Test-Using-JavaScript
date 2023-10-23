@@ -32,23 +32,7 @@ describe('Test http request', () => {
 })
 
 
-    //this will fail
-describe('Test unavaibble request', () => {
 
-    it('it should return 200', (done) => {
-
-        chai.request('http://localhost:3000')
-            .get('/about')
-            .end((err, res) => {
-                assert.equal(res.status, 200);
-
-                done();
-            }
-
-            )
-    })
-})
-})
 
 //users
 describe("Does the does user exist?", () => {

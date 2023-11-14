@@ -12,6 +12,7 @@ const users = [
     }
 ];
 
+// takes care of log in autherization 
 router.post('/login', function(req, res) {
     const { username, password } = req.body;
 

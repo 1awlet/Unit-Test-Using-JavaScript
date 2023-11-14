@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
 
-
+// using hard coded user data as an example 
 const users = [
     {
         id: 1,

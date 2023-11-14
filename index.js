@@ -9,11 +9,14 @@ app.use(bodyParser.json());
 var emplooyesRoute = require('./emplooyes.js').router;
 
 app.use("/emplooyes",emplooyesRoute );
+
+
 app.get('/',(req, res)=>{
 
     res.json({"message":"Welcome to emplooyes dashboard"});
 })
 
+// port number 
 app.listen(3000, ()=>{
 
     console.log('Port has started')

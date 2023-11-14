@@ -6,7 +6,7 @@ import chaiHttp from 'chai-http';
 const emplooyes = require("../emplooyes").emplooyes;
 chai.use(chaiHttp);
 
-
+// simple test to see if asseert library is working
 describe('Tests functions', () => {
     let word = 'Space unit';
     let wordSplit = word.split(' ');

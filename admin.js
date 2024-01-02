@@ -41,7 +41,6 @@ router.post('/login', function(req, res) {
 
 })
 
-
 router.get('/', function(req, res) {
    
 
@@ -52,8 +51,6 @@ router.get('/', function(req, res) {
         role: "admin"
     });
 });
-
-
 
 function isUsernameValid(username) {
     //this regular expression is provided in the book 5.2.2
